@@ -2,6 +2,8 @@
 
 A library for creating sort key, inspired by Jira's Lexorank.
 
+[![Build Status](https://travis-ci.org/b123400/Sortee.svg?branch=master)](https://travis-ci.org/b123400/Sortee)
+
 ## Motivation
 
 To represent an ordered list in database, the simplest way is to assign an integer to each row. The problem though is, reordering requires updating multiple rows. Sorting by string can overcome this problem, Sortee provides a function that generates strings for sorting.
