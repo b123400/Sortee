@@ -11,14 +11,14 @@ To represent an ordered list in database, the simplest way is to assign an integ
 Let's say you have 3 rows, with "a" "c" "t" as sort key. To move "t" to the middle of the list, you can get the new sort key by:
 
 ```haskell
-between "a" "c" // "b"
+between "a" "c" -- "b"
 ```
 
 If you do not have a lower / upper reference, pass `Nothing`:
 
 ```haskell
-between Nothing "9" // "4"
-between "q" Nothing // "v"
+between Nothing "9" -- "4"
+between "q" Nothing -- "v"
 ```
 
 When there is no "space" between keys, Sortee increases the length of the string.
@@ -33,7 +33,7 @@ between Nothing "1" == Sortee "0U"
 Not every possible input is valid.
 
 ```haskell
-between Nothing "0" // Nothing
-between "b" "b" // Nothing
-between "b" "b0" // Nothing
+between Nothing "0" -- Nothing
+between "b" "b" -- Nothing
+between "b" "b0" -- Nothing
 ```
