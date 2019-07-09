@@ -34,13 +34,17 @@ empty :: Sortee
 empty = Sortee ""
 
 -- | Create a new sort string that is between the provided strings.
+-- For example:
+--
+-- > between "a" "c" -- "b"
 --
 -- Laws:
 --
+-- > a < (between a b) < b
 -- > (between Nothing a) < a
 -- > (between a Nothing) > a
 -- > (between a a) == Nothing
--- > (between a b) == (between b a)
+-- > (between (Just a) (Just b)) == (between (Just b) (Just a))
 between :: Maybe Sortee -> Maybe Sortee -> Maybe Sortee
 between Nothing Nothing = Just $ Sortee [middleChar]
 between Nothing (Just a) = between' empty a
