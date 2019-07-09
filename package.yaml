@@ -1,7 +1,7 @@
 name:                sortee
 version:             0.1.0.0
 github:              "b123400/sortee"
-license:             GPLv3
+license:             GPL-3
 author:              "b123400"
 maintainer:          "i@b123400.net"
 copyright:           "2019 b123400"
@@ -11,8 +11,8 @@ extra-source-files:
 - ChangeLog.md
 
 # Metadata used when publishing your package
-# synopsis:            Short description of your package
-# category:            Web
+synopsis:            Generate string for sort key
+category:            Sorting
 
 # To avoid duplicated efforts in documentation and dealing with the
 # complications of embedding Haddock markup inside cabal files, it is
@@ -33,7 +33,6 @@ tests:
     - -threaded
     - -rtsopts
     - -with-rtsopts=-N
-    - -Werror
     dependencies:
     - sortee
     - hspec >=2.0.0
